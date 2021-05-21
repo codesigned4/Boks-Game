@@ -21,12 +21,9 @@ public class Fighter {
     }
 
     int hit(Fighter foe){
-        int kalan_can=foe.healthy-this.damage;
-        if(kalan_can<=0)
-            kalan_can=0;
-        System.out.println(this.name+" ==> "+foe.name+" "+this.damage+" canı azaldı "+"     "+foe.name+": sağlık "+kalan_can);
+        System.out.println(this.name+" ==> "+foe.name+"  -"+this.damage+" vuruş yaptı ");
         if(foe.isDodge()){
-            System.out.println(foe.name+" Gelen hasarı blokladı ");
+            System.out.println(foe.name+" gelen hasarı blokladı ");
             return foe.healthy;
         }
         if(foe.healthy-this.damage<=0){
