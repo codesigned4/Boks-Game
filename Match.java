@@ -24,9 +24,14 @@ public class Match {
                         break;
                     }
                     this.f1.healthy = this.f2.hit(this.f1);
+
                     if (isWin()) {
                         break;
                     }
+
+                    System.out.println("\n-----Sağlık-----");
+                    System.out.println(this.f2.name+" sağlık :"+this.f2.healthy);
+                    System.out.println(this.f1.name+" sağlık :"+this.f1.healthy);
                 }
                 else{
                     this.f1.healthy = this.f2.hit(this.f1);
@@ -37,6 +42,10 @@ public class Match {
                     if (isWin()) {
                         break;
                     }
+                    System.out.println("\n-----Sağlık-----");
+                    System.out.println(this.f1.name+" sağlık :"+this.f1.healthy);
+                    System.out.println(this.f2.name+" sağlık :"+this.f2.healthy);
+
                 }
 
                 ++round;
